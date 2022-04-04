@@ -1,6 +1,11 @@
 <template>
   <v-app-bar :elevation="0" color="transparent" :height="80">
-    <v-container fluid class="d-flex align-center">
+    <v-app-bar-nav-icon
+      @click.stop="drawer = !drawer"
+      color="black"
+      class="hidden-md-and-up"
+    ></v-app-bar-nav-icon>
+    <v-container fluid class="d-flex align-center nav">
       <div class="d-flex align-center">
         <v-img
           src="https://res.cloudinary.com/frozenchicken/image/upload/v1648760140/Flex/Group_ljmndx.png"
@@ -16,7 +21,7 @@
         <router-link to="/" class="ml-12 grey--text">Resources</router-link>
       </div>
       <v-spacer></v-spacer>
-      <div>
+      <div class="d-flex align-cemter">
         <v-btn
           href="https://letesend.com/"
           target="_blank"
@@ -28,12 +33,8 @@
         <v-btn color="success" class="" :elevation="0"> Sign Up </v-btn>
       </div>
     </v-container>
-    <v-app-bar-nav-icon
-      @click.stop="drawer = !drawer"
-      color="black"
-      class="hidden-md-and-up"
-    ></v-app-bar-nav-icon>
-    <v-navigation-drawer app absolute v-model="drawer" right>
+
+    <v-navigation-drawer app absolute v-model="drawer">
       <v-list two-line>
         <v-list-item>
           <router-link to="/" class="ml-12 grey--text">Products</router-link>
@@ -66,9 +67,9 @@ export default {
 .nav {
   margin-left: 90.05px !important;
   margin-right: 88px !important;
-}
-.navs {
-  margin-left: 0px !important;
-  margin-right: 0px !important;
+  @media (max-width: 900px) {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
 }
 </style>

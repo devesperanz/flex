@@ -4,7 +4,7 @@
       color="success"
       rounded="lg"
       max-width="62"
-      class="white--text text-caption text-center mx-auto font-weight-medium mb-6"
+      class="white--text text-caption text-center mx-auto font-weight-medium hero__heading mb-6"
     >
       HEADER
     </v-sheet>
@@ -74,7 +74,16 @@ export default {};
   }
   @media (max-width: 490px) {
     width: 400px;
-    padding: 38px 0px;
+    padding: 20px 0px;
+  }
+  @media (max-width: 375px) {
+    width: 350px;
+    padding: 20px 0px;
+  }
+  &__heading {
+    @media (max-width: 600px) {
+      margin: 35px 0px;
+    }
   }
   &__content {
     &-title {
@@ -91,10 +100,15 @@ export default {};
       }
       @media (max-width: 600px) {
         font-size: 36px;
+        padding: 0px 0px;
       }
       @media (max-width: 490px) {
         font-size: 28px;
         line-height: 38px;
+      }
+      @media (max-width: 375px) {
+        font-size: 20px;
+        line-height: 30px;
       }
     }
     &-subtitle {
@@ -106,6 +120,10 @@ export default {};
       @media (max-width: 490px) {
         line-height: 24px;
         font-size: 12px;
+      }
+      @media (max-width: 375px) {
+        font-size: 14px;
+        line-height: 20px;
       }
     }
     &-action {
