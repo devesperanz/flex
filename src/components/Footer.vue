@@ -21,7 +21,7 @@
         </v-col>
       </v-row>
     </div>
-    <v-divider class="mb-4 footer__divider" color="#333F51"></v-divider>
+    <v-divider class="mb-4" color="#333F51"></v-divider>
     <div class="mt-10">
       <p class="gray--text">© {{ currentYear }} Flex. All rights reserved.</p>
     </div>
@@ -62,9 +62,6 @@ export default {
   &__route {
     margin-bottom: 30px;
     margin-top: 30px;
-  }
-  &__divider {
-    border: 1px solid;
   }
 }
 </style>
